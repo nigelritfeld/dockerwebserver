@@ -1,0 +1,74 @@
+//Fonts
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap')
+
+$font-stack: 'Open Sans', sans-serif
+$font-white: #fff
+$font-weight: 600!default
+
+html, body
+  margin: 0
+  padding: 0
+  font-family: $font-stack
+
+h1,h2,h3,h4,h5
+  color: $font-white
+
+body
+  height: 100vh
+  display: flex
+  justify-content: center
+  align-items: center
+
+  background-color: #131313
+
+  nav
+    position: fixed
+    top: 0
+    width: 100vw
+    height: 10vh
+    background-color: #fff
+
+  main
+    width: 100vw
+    padding: 0px 2.5%
+
+
+  .stream-wrapper
+    width: 50%
+    padding: 20px!important
+    background-color: #181818
+    font-weight: 600
+    display: flex
+    justify-content: center
+    flex-direction: column-reverse
+    #videoSource,#audioSource
+      width: 65%
+    .select
+      display: flex
+      flex-direction: column
+      padding: 0px 10px
+      color: $font-white
+      font-weight: $font-weight
+    .video-object
+      width: 100%
+    .stream-settings-wrapper
+
+    .select-wrapper
+      display: flex
+      flex-direction: row
+      width: 100%
+      padding: 10px 0px
+      //background-color: rebeccapurple
+    section.select
+      padding: 10px 0px
+      width: 50%
+
+
+  .live-info-wrapper
+    width: 50%
+    background-color: red
+
+
+
+
+

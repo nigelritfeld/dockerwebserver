@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Login</title>
+    <link rel="stylesheet" href="assets/css/login-system.css">
+</head>
+<body>
+<div class="form-wrapper">
+
+    <h1 class="special-title fill-animation">Login</h1>
+    <form action="" id="login-form" method="post">
+        <div class="form-fields-wrapper">
+            <!--    Username-->
+            <div class="field-wrapper">
+                <div id="error-field-username"></div>
+                <label class="special-title fill-animation" for="login_username">Username</label>
+                <input type="text" placeholder="Username" name="login_username" id="login_username" required>
+            </div>
+
+            <!--    Password-->
+            <div class="field-wrapper">
+                <div id="error-field-password"></div>
+                <label class="special-title fill-animation" for="login_password">Password</label>
+                <input type="password" placeholder="password" name="login_password" id="login_password" required>
+            </div>
+
+        </div>
+
+        <button id="login-submit_btn" class="login-submit-btn" type="submit_login">Inloggen</button>
+
+    </form>
+    <a class="option-link" href="/registreren">Account aanmaken</a>
+</div>
+<div class="campaign-wrapper">
+    <div class="logo-wrapper">
+        <img id="logo" width="250" src="assets/images/logos/keilecafe-logo-wit.svg" alt="keilecafe logo">
+        <a href="https://keilecafe.nl"></a>
+    </div>
+</div>
+<script src="assets/js/login.js" type="module" async defer></script>
+</body>
+</html>
+

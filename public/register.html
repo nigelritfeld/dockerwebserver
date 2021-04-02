@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Registreren</title>
+    <link rel="stylesheet" href="assets/css/login-system.css">
+</head>
+<body class="demo-wrap">
+<div class="form-wrapper">
+
+    <h1 class="special-title fill-animation">Registreren</h1>
+    <form action="" id="register-form" method="post">
+        <div class="form-fields-wrapper">
+            <!--    Username-->
+            <div class="field-wrapper">
+                <div id="error-field-username"></div>
+                <label class="special-title fill-animation" for="username">Username</label>
+                <input type="text" placeholder="Username" name="username" id="username" required>
+            </div>
+            <!--    Name-->
+            <div class="field-wrapper">
+                <div id="error-field-name"></div>
+                <label class="special-title fill-animation" for="name">Name</label>
+                <input type="text" placeholder="First name" name="name" id="name" required>
+            </div>
+            <!--    E-mail-->
+            <div class="field-wrapper">
+                <div id="error-field-email"></div>
+                <label class="special-title fill-animation" for="email">E-mail</label>
+                <input type="text" placeholder="example@mail.com" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+            </div>
+            <!--    Password-->
+            <div class="field-wrapper">
+                <div id="error-field-password"></div>
+                <label class="special-title fill-animation" for="password">Password</label>
+                <input type="password" placeholder="password" name="password" id="password" required>
+            </div>
+            <!--    Verify password-->
+            <div class="field-wrapper">
+                <div id="error-field-password-verify"></div>
+                <label class="special-title fill-animation" for="verify_password">Verify password</label>
+                <input type="password" placeholder="password" name="verify_password" id="verify_password" required>
+            </div>
+        </div>
+
+        <button id="register-submit_btn" class="register-submit-btn" type="submit">Registeer nu</button>
+
+    </form>
+    <a class="option-link" href="/login">Al een account? Login</a>
+</div>
+<div class="campaign-wrapper">
+    <div class="logo-wrapper">
+        <img id="logo" width="400" src="assets/images/logos/keilecafe-beeldmerk-wit.svg" alt="keilecafe logo">
+        <a href="https://keilecafe.nl"></a>
+    </div>
+    <!--    <img width="250" src="assets/images/logos/keilecafe-beeldmerk-wit.svg" alt="">-->
+</div>
+<script src="assets/js/login.js" type="module" async defer></script>
+<script src="app.js" type="module" async defer></script>
+</body>
+</html>

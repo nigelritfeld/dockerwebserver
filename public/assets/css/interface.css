@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+  color: #fff;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #131313;
+}
+body nav {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 10vh;
+  background-color: #fff;
+}
+body main {
+  width: 100vw;
+  padding: 0px 2.5%;
+}
+body .stream-wrapper {
+  width: 50%;
+  padding: 20px !important;
+  background-color: #181818;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  flex-direction: column-reverse;
+}
+body .stream-wrapper #videoSource, body .stream-wrapper #audioSource {
+  width: 65%;
+}
+body .stream-wrapper .select {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 10px;
+  color: #fff;
+  font-weight: 600;
+}
+body .stream-wrapper .video-object {
+  width: 100%;
+}
+body .stream-wrapper .select-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 10px 0px;
+}
+body .stream-wrapper section.select {
+  padding: 10px 0px;
+  width: 50%;
+}
+body .live-info-wrapper {
+  width: 50%;
+  background-color: red;
+}
+
+/*# sourceMappingURL=interface.css.map */

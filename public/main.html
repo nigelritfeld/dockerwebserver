@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <title>Broadcaster</title>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="assets/css/interface.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="stream-wrapper">
+            <div class="stream-settings-wrapper">
+                <div class="select-wrapper">
+                    <section class="select">
+                        <label for="audioSource">Audio source: </label>
+                        <select id="audioSource"></select>
+                    </section>
+
+                    <section class="select">
+                        <label for="videoSource">Video source: </label>
+                        <select id="videoSource"></select>
+                    </section>
+                </div>
+                <video playsinline autoplay muted></video>
+            </div>
+        </div>
+
+    </main>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="assets/js/broadcast.js"></script>
+</body>
