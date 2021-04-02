@@ -1,4 +1,4 @@
-# Hologram-streaming-app
+# Streaming Webapplication
 
 The streaming app is the app that will be used to start a live stream. The application establish uses Socket.IO to establish a P2P Connection in Javascript.
 That connection is nessecary to stream the data from WebRTC in realtime.
