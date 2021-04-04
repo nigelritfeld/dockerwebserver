@@ -1,8 +1,6 @@
 # Streaming Webapplication
 
-The streaming app is the app that will be used to start a live stream. The application establish uses Socket.IO to establish a P2P Connection in Javascript.
-That connection is nessecary to stream the data from WebRTC in realtime.
-
+This application is a web based streaming application used in a hologram streaming project. The application uses Socket.IO to establish a P2P Connection in Javascript. That connection is nessecary to stream the data from WebRTC in realtime.
 
 ***NOTE before trying to use the app you need to create a database with an users table and pass the database credentials in the server js file. (I will add a SQL file to import the tables soon...)***
 
