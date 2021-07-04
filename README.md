@@ -14,10 +14,6 @@ To install nodemon globally use the command:
 
     $ npm install -g nodemon
 
-Navigate to the app that want to try
-
-    $ cd <path to directory>
-    
 Then run:
 
     $ npm install
