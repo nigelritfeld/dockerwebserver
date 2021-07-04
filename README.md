@@ -2,19 +2,13 @@
 
 This application is a web based streaming application used in a hologram streaming project. The application uses Socket.IO to establish a P2P Connection in Javascript. That connection is nessecary to stream the data from the WebRTC API to every connected client in realtime.
 
-***NOTE before trying to use the app you need to create a database with an users table and pass the database credentials in the server js file. (I will add a SQL file to import the tables soon...)***
+***NOTE before trying to use the app you need to create a database with an users table and pass the database credentials in the server js file.***
 
-## Using the app
+## 1. Database configuration
 
-You will need to have node.js and npm. If you don't have it installed already refrence this link: https://nodejs.org/en/
+1.1 You need to have working database. I have included a database_import.sql file you can use to create a database with a single table called 'users'.
 
-I use Nodemon to speed up the development process.
-
-## Configuration
-
-You need to have working database
-
-Edit the server js file on linel
+1.2 Edit the server.js file on line 92 and insert in your database credentials.
 
     $ {
         host: 'localhost',
@@ -24,12 +18,19 @@ Edit the server js file on linel
         database: 'database_name',
         connectionLimit: 10
      }
+ 
+
+## 2. Using the app
+
+You will need to have node.js and npm. If you don't have it installed already refrence this link: https://nodejs.org/en/
+
+I use Nodemon to speed up the development process.
 
 To install nodemon globally use the command:
 
     $ npm install -g nodemon
 
-Then run:
+Then install all the required dependencies by the following command:
 
     $ npm install
 
