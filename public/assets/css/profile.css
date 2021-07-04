@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+html button:focus, body button:focus {
+  outline: none;
+}
+
+h1, h2, h3, h4, h5 {
+  color: #fff;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #181818;
+}
+body main {
+  width: 100vw;
+  padding: 0px 6vmin;
+}
+body .no-stream {
+  background-image: url("../images/backgrounds/keilecafe-vibes.jpeg");
+  background-position: 50% 0;
+  background-size: cover;
+}
+body .icon {
+  width: 16px;
+  padding: 0px 10px;
+}
+body .form-wrapper {
+  width: 50%;
+}
+body nav {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 10vh;
+  padding: 0px 6vmin;
+  background-color: #131313d4;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body nav li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body nav #delete-profile-btn {
+  transition: all 0.4s;
+  border-radius: 5px;
+  padding: 10px;
+  color: #fff;
+  font-weight: 600;
+  background-color: #e10371;
+  text-decoration: none;
+  list-style: none;
+  border: none;
+  height: 100%;
+}
+body nav #delete-profile-btn:hover {
+  transition: all 0.4s;
+  background-color: darkred;
+}
+body nav .menu-wrapper {
+  width: 100vw;
+  height: 10vh;
+  padding: 0px 6vmin;
+  background-color: #131313d4;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+body nav .menu-logo {
+  padding: 10px;
+  width: 52px;
+}
+body nav .icon {
+  width: 32px;
+}
+body nav h1.fill-animation {
+  transition: all 0.5s;
+  text-stroke: 1px #f7f7f7;
+  -webkit-text-stroke: 1px #f7f7f7;
+  color: transparent;
+}
+body nav a {
+  color: #fff;
+}
+body nav .option-link {
+  padding: 15px 0px;
+}
+body nav ul {
+  text-decoration: none;
+  display: flex;
+  align-self: flex-end;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+body nav ul li {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 10px;
+  list-style: none;
+  text-decoration: none;
+  font-weight: 600;
+}
+body nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+body nav ul li a:hover {
+  text-decoration: none;
+  color: darkred;
+}
+
+.special-title {
+  transition: all 0.5s;
+  text-stroke: 1px #f7f7f7;
+  -webkit-text-stroke: 1px #f7f7f7;
+}
+.special-title .form-fields-wrapper {
+  padding: 5%;
+  border-radius: 15px;
+}
+.special-title .field-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0px;
+}
+.special-title .field-wrapper input {
+  background: none;
+  font-size: 1.2rem;
+  transition: all 0.4s;
+  color: #fff;
+  border: none;
+  border-bottom: solid 1px;
+  border-bottom-color: #f7f7f7;
+  padding: 10px 5px 5px 0px;
+}
+.special-title .field-wrapper input[placeholder-shown] {
+  color: #fff;
+}
+.special-title .field-wrapper #error-field-username, .special-title .field-wrapper #error-field-name,
+.special-title .field-wrapper #error-field-email, .special-title .field-wrapper #error-field-password,
+.special-title .field-wrapper #error-field-password-verify {
+  color: red;
+}
+.special-title .field-wrapper label {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+}
+.special-title .field-wrapper input:focus {
+  outline: none;
+  transition: all 0.4s;
+  border-bottom: solid 3px;
+}
+.special-title main {
+  width: 100vw;
+  padding: 0px 2.5%;
+}
+
+/*# sourceMappingURL=profile.css.map */

@@ -8,7 +8,9 @@
 </head>
 <body class="demo-wrap">
 <div class="form-wrapper">
-
+    <%if (error) { %>
+        <div id="error-field-login"> <%= error %></div>
+    <% } %>
     <h1 class="special-title fill-animation">Registreren</h1>
     <form action="" id="register-form" method="post">
         <div class="form-fields-wrapper">
@@ -45,7 +47,6 @@
         </div>
 
         <button id="register-submit_btn" class="register-submit-btn" type="submit">Registeer nu</button>
-
     </form>
     <a class="option-link" href="/login">Al een account? Login</a>
 </div>

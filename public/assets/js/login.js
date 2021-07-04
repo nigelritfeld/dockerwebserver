@@ -5,10 +5,9 @@
  */
 let registerSubmitBtn = document.querySelector('#register-submit_btn')
 let loginSubmitBtn = document.querySelector('#login-submit_btn')
-
+let deleteBtn = document.getElementById('delete-profile-btn')
 let loginForm = document.querySelector('#login-form')
 let from = document.getElementById('register-form')
-
 let errorUsername = document.getElementById('error-field-username')
 let errorName = document.getElementById('error-field-name')
 let errorEmail = document.getElementById('error-field-email')
@@ -34,7 +33,7 @@ function init(){
             animateTitles('.special-title')
         })
         from.addEventListener('mouseleave', ()=>{
-            logo.src = 'assets/images/logos/keilecafe-logo-blue.svg'
+            logo.src = 'assets/images/logos/keilecafe-logo-wit.svg'
             animateTitles('.special-title')
         })
     }
@@ -51,9 +50,12 @@ function init(){
             animateTitles('.special-title')
         })
     }
-    logo.addEventListener('mouseenter', ()=>{
-
-    })
+    // logo.addEventListener('mouseenter', ()=>{
+    //
+    // })
+    if (deleteBtn){
+        deleteBtn.addEventListener('click', deleteUserProfile)
+    }
 
 }
 function animateTitles(titlesWithClass)
@@ -107,12 +109,6 @@ function checkInput(input)
     if (input.value.length === 0){
         console.log(`${input.id} is nog leeg`)
     }
-
-    // errorUsername
-    // errorName
-    // errorEmail
-    // errorPassword
-    // errorVerifyPassword
     matchPassword()
 }
 
@@ -123,8 +119,8 @@ function matchPassword()
 
     if (firstPassword.value === ''){
         errorVerifyPassword.innerHTML = ''
-        firstPassword.classList.toggle('')
-        secondPassword.input.style.border =   'solid red';
+        // firstPassword.classList.toggle('')
+        // secondPassword.input.style.border =   'solid red';
     }else if(firstPassword.value === secondPassword.value)
     {
         errorVerifyPassword.innerHTML = 'Your chosen password match, looking good!'
@@ -132,4 +128,20 @@ function matchPassword()
     {
         errorVerifyPassword.innerHTML = 'Wachtwoorden komt niet overeen'
     }
+}
+
+/**
+ * Delete request
+ */
+function deleteUserProfile() {
+    if (confirm('U sure you want to delete your profile? This can\'t be reverted'))
+    {
+        const xhr = new XMLHttpRequest();
+        xhr.open('post', '/deleteUserProfile', true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+        xhr.send();
+    }else{
+
+    }
+
 }

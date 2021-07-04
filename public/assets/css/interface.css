@@ -4,6 +4,9 @@ html, body {
   padding: 0;
   font-family: "Open Sans", sans-serif;
 }
+html button:focus, body button:focus {
+  outline: none;
+}
 
 h1, h2, h3, h4, h5 {
   color: #fff;
@@ -14,27 +17,146 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #131313;
+  background-color: #181818;
+}
+body .no-stream {
+  background-image: url("../images/backgrounds/video-placeholder.jpg");
+  background-position: 50% 0;
+  background-size: cover;
 }
 body nav {
   position: fixed;
   top: 0;
   width: 100vw;
   height: 10vh;
-  background-color: #fff;
+  padding: 0px 6vmin;
+  background-color: #131313d4;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+body nav .menu-wrapper {
+  width: 100vw;
+  height: 10vh;
+  padding: 0px 6vmin;
+  background-color: #131313d4;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+body nav .menu-logo {
+  padding: 10px;
+  width: 52px;
+}
+body nav .icon {
+  width: 16px;
+  padding: 0px 10px;
+}
+body nav ul {
+  text-decoration: none;
+  display: flex;
+  align-self: flex-end;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+body nav ul li {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 10px;
+  list-style: none;
+  text-decoration: none;
+  font-weight: 600;
+}
+body nav ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+}
+body nav ul li a:hover {
+  text-decoration: none;
+  color: #e10371;
 }
 body main {
   width: 100vw;
-  padding: 0px 2.5%;
+  padding: 0px 6vmin;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .logo-wrapper {
+  width: 50%;
+  display: flex;
+  justify-content: center;
 }
 body .stream-wrapper {
-  width: 50%;
+  min-width: 39%;
+  width: 42%;
   padding: 20px !important;
-  background-color: #181818;
+  border-radius: 20px;
+  background-color: #232323;
   font-weight: 600;
   display: flex;
   justify-content: center;
   flex-direction: column-reverse;
+  align-self: center;
+}
+body .stream-wrapper button:hover {
+  background-color: #9f0451;
+  transition: all 0.4s;
+}
+body .stream-wrapper button {
+  transition: all 0.4s;
+  border-radius: 5px;
+  padding: 10px;
+  color: #fff;
+  font-weight: 600;
+  background-color: #e10371;
+  text-decoration: none;
+  list-style: none;
+  border: none;
+  height: 100%;
+}
+body .stream-wrapper .live-tag {
+  display: flex !important;
+  justify-content: center;
+  text-align: center;
+  height: 23px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: greenyellow;
+  color: #f7f7f7;
+  width: 100px;
+}
+body .stream-wrapper .not-live-tag {
+  content: "Not steaming";
+  justify-content: center;
+  text-align: center;
+  align-self: flex-end;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: greenyellow;
+  color: #f7f7f7;
+  width: 100px;
+  background-color: #94024b;
+}
+body .stream-wrapper .stream-controls-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0px;
+}
+body .stream-wrapper .recording-settings-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
 }
 body .stream-wrapper #videoSource, body .stream-wrapper #audioSource {
   width: 65%;
@@ -49,8 +171,22 @@ body .stream-wrapper .select {
 body .stream-wrapper .video-object {
   width: 100%;
 }
+body .stream-wrapper .stream-settings-wrapper {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+}
+body .stream-wrapper video {
+  transition: all 0.4s;
+  width: 100%;
+  border-radius: 5px;
+}
 body .stream-wrapper .select-wrapper {
   display: flex;
+  align-items: center;
   flex-direction: row;
   width: 100%;
   padding: 10px 0px;
@@ -61,7 +197,6 @@ body .stream-wrapper section.select {
 }
 body .live-info-wrapper {
   width: 50%;
-  background-color: red;
 }
 
 /*# sourceMappingURL=interface.css.map */

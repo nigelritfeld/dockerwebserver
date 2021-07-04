@@ -1,11 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <title><%= username %></title>
-    <p>Password is: <%= email %></p>
+    <title>Broadcaster</title>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="assets/css/profile.css">
 </head>
 <body>
+<nav style="padding-left: 100px">
+    <div class="menu-wrapper">
+        <a href="/"><img class="menu-logo" src="./assets/images/logos/keilecafe-beeldmerk-pink.svg" alt="logo"></a>
+        <ul>
+            <li>
+                <button id="delete-profile-btn" class="delete-btn">Delete profile</button>
+            </li>
+            <li><a href="/profile">Profile<img class="icon" src="./assets/icons/user.svg" alt="log-out-icon"></a></li>
+            <li><a href="/logout">Logout<img class="icon" src="./assets/icons/logout.svg" alt="log-out-icon"></a></li>
+        </ul>
+    </div>
+</nav>
+
+<main>
+
+    <div class="form-wrapper">
+        <form action="" class="profile-form" method="post">
+            <div class="profile-fields-wrapper">
+                <!--    Username-->
+                <div class="field-wrapper">
+                    <div id="error-field-username"></div>
+                    <label class="special-title fill-animation" for="username">Username</label>
+                    <input type="text" placeholder="Username" name="username" id="username" value="<%= username %>"
+                           required>
+                </div>
+                <!--    Name-->
+                <div class="field-wrapper">
+                    <div id="error-field-name"></div>
+                    <label class="special-title fill-animation" for="name">Name</label>
+                    <input type="text" placeholder="First name" name="name" id="name" value="<%= name %>" required>
+                </div>
+                <!--    E-mail-->
+                <div class="field-wrapper">
+                    <div id="error-field-email"></div>
+                    <label class="special-title fill-animation" for="email">E-mail</label>
+                    <input type="text" placeholder="example@mail.com" name="email" id="email"
+                           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" value="<%= email %>" required>
+                </div>
+                <!--    Password-->
+                <div class="field-wrapper">
+                    <div id="error-field-password"></div>
+                    <label class="special-title fill-animation" for="password">Password</label>
+                    <input type="password" placeholder="password" name="password" id="password" required>
+                </div>
+                <!--    Verify password-->
+                <div class="field-wrapper">
+                    <div id="error-field-password-verify"></div>
+                    <label class="special-title fill-animation" for="verify_password">Verify password</label>
+                    <input type="password" placeholder="password" name="verify_password" id="verify_password" required>
+                </div>
+
+                <button id="update-profile-submit_btn" class="register-submit-btn" type="submit">Update profiel</button>
+
+            </div>
+        </form>
+    </div>
+    <script src="assets/js/login.js" type="module" async defer></script>
+</main>
 
 </body>
-</html>

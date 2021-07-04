@@ -1,0 +1,158 @@
+//Fonts
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap')
+
+$font-stack: 'Open Sans', sans-serif
+$font-white: #fff
+$error-color: red
+$font-weight: 600!default
+
+=text-stroke($property)
+  text-stroke: $property
+  -webkit-text-stroke: $property
+
+html, body
+  margin: 0
+  padding: 0
+  font-family: $font-stack
+  button:focus
+    outline: none
+
+h1,h2,h3,h4,h5
+  color: $font-white
+
+body
+  height: 100vh
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: #181818
+  main
+    width: 100vw
+    padding: 0px 6vmin
+  .no-stream
+    background-image: url('../images/backgrounds/keilecafe-vibes.jpeg')
+    background-position: 50% 0
+    background-size: cover
+  .icon
+    width: 16px
+    padding: 0px 10px
+  .form-wrapper
+    width: 50%
+  nav
+    position: fixed
+    top: 0
+    width: 100vw
+    height: 10vh
+    padding: 0px 6vmin
+    background-color: #131313d4
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+    li
+      a
+        display: flex
+        justify-content: center
+        align-items: center
+    #delete-profile-btn
+      transition: all 0.4s
+      border-radius: 5px
+      padding: 10px
+      color: #fff
+      font-weight: 600
+      background-color: #e10371
+      text-decoration: none
+      list-style: none
+      border: none
+      height: 100%
+    #delete-profile-btn:hover
+      transition: all 0.4s
+      background-color: darkred
+
+    .menu-wrapper
+      width: 100vw
+      height: 10vh
+      padding: 0px 6vmin
+      background-color: #131313d4
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      align-items: center
+    .menu-logo
+      padding: 10px
+      width: 52px
+    .icon
+      width: 32px
+    h1.fill-animation
+      transition: all 0.5s
+      +text-stroke(1px #f7f7f7)
+      color: transparent
+    display: flex
+    flex-direction: column
+    //justify-content: center
+    align-items: center
+    a
+      color: $font-white
+    .option-link
+      padding: 15px 0px
+    ul
+      text-decoration: none
+      display: flex
+      align-self: flex-end
+      flex-direction: row
+      justify-content: center
+      align-items: center
+      li
+        display: flex
+        flex-direction: row
+        justify-content: center
+        align-items: center
+        padding: 0px 10px
+        list-style: none
+        text-decoration: none
+        font-weight: 600
+        a
+          text-decoration: none
+          color: #fff
+        a:hover
+          text-decoration: none
+          color: darkred
+
+.special-title
+  transition: all 0.5s
+  +text-stroke(1px #f7f7f7)
+  //color: #fff
+  .form-fields-wrapper
+    padding: 5%
+    border-radius: 15px
+  .field-wrapper
+    display: flex
+    flex-direction: column
+    padding: 10px 0px
+    input
+      background: none
+      font-size: 1.2rem
+      transition: all 0.4s
+      color: $font-white
+      border: none
+      border-bottom: solid 1px
+      border-bottom-color: #f7f7f7
+      padding: 10px 5px 5px 0px
+    input[placeholder-shown]
+      color: #fff
+    #error-field-username, #error-field-name,
+    #error-field-email, #error-field-password,
+    #error-field-password-verify
+      color: $error-color
+    label
+      font-size: 1.5rem
+      font-weight: $font-weight
+      color: #fff
+    input:focus
+      outline: none
+      transition: all 0.4s
+      border-bottom: solid 3px
+
+  main
+    width: 100vw
+    padding: 0px 2.5%

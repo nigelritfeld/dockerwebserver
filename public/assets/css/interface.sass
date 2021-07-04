@@ -9,6 +9,8 @@ html, body
   margin: 0
   padding: 0
   font-family: $font-stack
+  button:focus
+    outline: none
 
 h1,h2,h3,h4,h5
   color: $font-white
@@ -19,28 +21,135 @@ body
   justify-content: center
   align-items: center
 
-  background-color: #131313
+  background-color: #181818
+  .no-stream
+    background-image: url('../images/backgrounds/video-placeholder.jpg')
+    background-position: 50% 0
+    background-size: cover
 
   nav
     position: fixed
     top: 0
     width: 100vw
     height: 10vh
-    background-color: #fff
+    padding: 0px 6vmin
+    background-color: #131313d4
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+    .menu-wrapper
+      width: 100vw
+      height: 10vh
+      padding: 0px 6vmin
+      background-color: #131313d4
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      align-items: center
+    .menu-logo
+      padding: 10px
+      width: 52px
+    .icon
+      width: 16px
+      padding: 0px 10px
+    ul
+      text-decoration: none
+      display: flex
+      align-self: flex-end
+      flex-direction: row
+      justify-content: center
+      align-items: center
+      li
+        display: flex
+        flex-direction: row
+        justify-content: center
+        align-items: center
+        padding: 0px 10px
+        list-style: none
+        text-decoration: none
+        font-weight: 600
+        a
+          display: flex
+          justify-content: center
+          align-items: center
+          text-decoration: none
+          color: #fff
+        a:hover
+          text-decoration: none
+          color: #e10371
 
   main
     width: 100vw
-    padding: 0px 2.5%
-
-
-  .stream-wrapper
+    padding: 0px 6vmin
+    display: flex
+    justify-content: space-between
+    align-items: center
+    //padding-top: 10%
+  .logo-wrapper
     width: 50%
+    display: flex
+    justify-content: center
+  .stream-wrapper
+    min-width: 39%
+    width: 42%
     padding: 20px!important
-    background-color: #181818
+    border-radius: 20px
+    background-color: #232323
     font-weight: 600
     display: flex
     justify-content: center
     flex-direction: column-reverse
+    align-self: center
+    button:hover
+      background-color: #9f0451
+      transition: all 0.4s
+    button
+      transition: all 0.4s
+      border-radius: 5px
+      padding: 10px
+      color: #fff
+      font-weight: 600
+      background-color: #e10371
+      text-decoration: none
+      list-style: none
+      border: none
+      height: 100%
+    .live-tag
+      display: flex!important
+      justify-content: center
+      text-align: center
+      //align-self: flex-end
+      height: 23px
+      padding: 5px
+      border-radius: 5px
+      background-color: greenyellow
+      color: #f7f7f7
+      width: 100px
+    .not-live-tag
+      content: 'Not steaming'
+      justify-content: center
+      text-align: center
+      align-self: flex-end
+      padding: 5px
+      border-radius: 5px
+      background-color: greenyellow
+      color: #f7f7f7
+      width: 100px
+      background-color: #94024b
+    .stream-controls-wrapper
+      display: flex
+      justify-content: space-between
+      align-items: center
+      width: 100%
+      padding: 10px 0px
+      //background-color: red
+    .recording-settings-wrapper
+      display: flex
+      justify-content: space-between
+      //background-color: red
+      width: 50%
+      //padding: 10px 0px
     #videoSource,#audioSource
       width: 65%
     .select
@@ -52,9 +161,20 @@ body
     .video-object
       width: 100%
     .stream-settings-wrapper
+      width: 90%
+      display: flex
+      justify-content: center
+      flex-direction: column
+      align-items: center
+      align-self: center
+    video
+      transition: all 0.4s
+      width: 100%
+      border-radius: 5px
 
     .select-wrapper
       display: flex
+      align-items: center
       flex-direction: row
       width: 100%
       padding: 10px 0px
@@ -66,9 +186,4 @@ body
 
   .live-info-wrapper
     width: 50%
-    background-color: red
-
-
-
-
-
+    //background-color: red
