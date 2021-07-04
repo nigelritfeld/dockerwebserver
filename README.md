@@ -14,7 +14,7 @@ I use Nodemon to speed up the development process.
 
 You need to have working database
 
-Edit the server js file on linel
+Edit the server.js file on line 92 and insert in your database credentials.
 
     $ {
         host: 'localhost',
